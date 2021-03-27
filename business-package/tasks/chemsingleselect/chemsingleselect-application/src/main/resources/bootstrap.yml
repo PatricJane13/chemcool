@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: chemsingleselect-application
+  cloud:
+    config:
+      name: chemsingleselect-application
+      discovery:
+        enabled: true
+        service-id: config-service
+      username: ${SPRING_CLOUD_CONFIG_USERNAME}
+      password: ${SPRING_CLOUD_CONFIG_PASSWORD}
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
